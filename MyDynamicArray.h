@@ -42,6 +42,24 @@ public:
 		return size == 0;
 	}
 
+	void Resize(int newSize) {
+		if (newSize < 0)
+			newSize = 0;
+
+		t* temp = dynArray;
+
+		dynArray = new t[newSize];
+
+		int smallsize = (newSize < size) ? newSize : size;
+
+		for (int i = 0; i < smallsize; i++) {
+			dynArray[i] = temp[i];
+		}
+
+		delete []temp;
+		size = newSize;
+	}
+
 
 	~MyDynamicArray() {
 		delete[]dynArray;

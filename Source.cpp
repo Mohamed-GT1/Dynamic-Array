@@ -12,8 +12,20 @@ int main() {
 
     dynamicArray.Print();
 
-    cout << "is the array empty ? " << dynamicArray.IsEmpty();
+    cout << "\n the size is " << dynamicArray.Size();
+    cout << "\nis the array empty ? " << dynamicArray.IsEmpty();
+    cout << endl;
 
+    dynamicArray.Resize(2);
+
+
+    cout << "\nafter resize to 2\nthe new array size is " << dynamicArray.Size()<<endl;
+    dynamicArray.Print();
+
+    dynamicArray.Resize(10);
+
+    cout << "\nafter resize to 10 \nthe new array size is " << dynamicArray.Size() << endl;
+    dynamicArray.Print();
     
     return 0;
 }
