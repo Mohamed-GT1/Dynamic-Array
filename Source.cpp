@@ -16,14 +16,16 @@ int main() {
     cout << "\nis the array empty ? " << dynamicArray.IsEmpty();
     cout << endl;
 
-    cout << "\nafter deleting first item \n";
-    dynamicArray.DeleteFirstItem();
-    dynamicArray.Print();
-    cout << "\n the size is " << dynamicArray.Size();
 
-    cout << endl << endl;
-    cout << "\nafter deleting last item \n";
-    dynamicArray.DeleteLastItem();
+    int index = dynamicArray.Find(20);
+    if (index == -1)
+        cout << "\nnot found\n";
+    else
+        cout << "\n found and the index is " << index << endl;
+
+    cout << endl;
+    cout << "\nafter deleting item 40 \n";
+    dynamicArray.DeleteItem(40);
     dynamicArray.Print();
     cout << "\n the size is " << dynamicArray.Size();
     

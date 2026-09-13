@@ -118,6 +118,25 @@ public:
 		DeleteItemAt(size-1);
 	}
 
+	int Find(t value) {
+		for (int i = 0; i < size; i++) {
+			if (dynArray[i] == value)
+				return i;
+		}
+
+		return -1;
+	}
+
+	bool DeleteItem(t value) {
+		int index = Find(value);
+
+		if (index == -1)
+			return false;
+
+		DeleteItemAt(index);
+		return true;
+	}
+
 	~MyDynamicArray() {
 		delete[]dynArray;
 	}
