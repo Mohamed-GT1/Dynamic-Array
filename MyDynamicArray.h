@@ -87,6 +87,29 @@ public:
 		dynArray = new t[0];
 	}
 
+	void DeleteItemAt(int index) {
+		if (index < 0 || index > size - 1)
+			return;
+
+		temp = dynArray;
+		size--;
+		dynArray = new t[size];
+
+		for (int i = 0; i < size; i++) {
+
+			if (i < index) {
+				
+				dynArray[i] = temp[i];
+			}
+			else {
+				dynArray[i] = temp[i + 1];
+			}
+
+		}
+
+		delete []temp;
+		
+	}
 
 	~MyDynamicArray() {
 		delete[]dynArray;

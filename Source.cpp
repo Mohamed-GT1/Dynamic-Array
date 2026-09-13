@@ -16,17 +16,10 @@ int main() {
     cout << "\nis the array empty ? " << dynamicArray.IsEmpty();
     cout << endl;
 
-    cout << "item [2] : " << dynamicArray.GetItem(2)<<endl;
-
-    cout << "\nreverse the array \n";
-    dynamicArray.Reverse();
+    cout << "\nafter deleting item 2 \n";
+    dynamicArray.DeleteItemAt(2);
     dynamicArray.Print();
-
-    cout << "\nclear the array\n";
-    dynamicArray.Clear();
-    cout << "items : \n";
-    dynamicArray.Print();
-    cout << "the size : " << dynamicArray.Size();
+    cout << "\n the size is " << dynamicArray.Size();
     
     return 0;
 }
