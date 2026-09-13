@@ -137,6 +137,29 @@ public:
 		return true;
 	}
 
+	void InsertAt(int index, t value) {
+		if (index < 0 || index > size - 1)
+			return;
+
+		temp = dynArray;
+		size++;
+
+		dynArray = new t[size];
+
+		for (int i = 0; i < index; i++) {
+			dynArray[i] = temp[i];
+		}
+
+		dynArray[index] = value;
+
+		for (int i = index+1; i < size; i++) {
+			dynArray[i] = temp[i-1];
+		}
+
+		delete[]temp;
+
+	}
+
 	~MyDynamicArray() {
 		delete[]dynArray;
 	}

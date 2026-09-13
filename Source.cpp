@@ -17,15 +17,10 @@ int main() {
     cout << endl;
 
 
-    int index = dynamicArray.Find(20);
-    if (index == -1)
-        cout << "\nnot found\n";
-    else
-        cout << "\n found and the index is " << index << endl;
-
+  
     cout << endl;
-    cout << "\nafter deleting item 40 \n";
-    dynamicArray.DeleteItem(40);
+    cout << "\nafter inserting item 400 at index 2 \n";
+    dynamicArray.InsertAt(2, 400);
     dynamicArray.Print();
     cout << "\n the size is " << dynamicArray.Size();
     
