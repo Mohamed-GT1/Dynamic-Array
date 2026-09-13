@@ -9,6 +9,7 @@ class MyDynamicArray
 private:
 	int size=0;
 	t *dynArray;
+	t* temp;
 
 public:
 	MyDynamicArray(int s=0) {
@@ -46,7 +47,7 @@ public:
 		if (newSize < 0)
 			newSize = 0;
 
-		t* temp = dynArray;
+		 temp = dynArray;
 
 		dynArray = new t[newSize];
 
@@ -58,6 +59,32 @@ public:
 
 		delete []temp;
 		size = newSize;
+	}
+
+	t GetItem(int index) {
+		if (index < 0 || index > size - 1)
+			return NULL;
+
+		return dynArray[index];
+	}
+
+	void Reverse() {
+		temp = dynArray;
+
+		dynArray = new t[size];
+
+		for (int i = 0; i < size; i++) {
+			dynArray[i] = temp[(size - 1)- i];
+		}
+
+		delete[]temp;
+	}
+
+	void Clear() {
+		delete[]dynArray;
+		size = 0;
+
+		dynArray = new t[0];
 	}
 
 
