@@ -111,6 +111,13 @@ public:
 		
 	}
 
+	void DeleteFirstItem() {
+		DeleteItemAt(0);
+	}
+	void DeleteLastItem() {
+		DeleteItemAt(size-1);
+	}
+
 	~MyDynamicArray() {
 		delete[]dynArray;
 	}

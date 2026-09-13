@@ -16,8 +16,14 @@ int main() {
     cout << "\nis the array empty ? " << dynamicArray.IsEmpty();
     cout << endl;
 
-    cout << "\nafter deleting item 2 \n";
-    dynamicArray.DeleteItemAt(2);
+    cout << "\nafter deleting first item \n";
+    dynamicArray.DeleteFirstItem();
+    dynamicArray.Print();
+    cout << "\n the size is " << dynamicArray.Size();
+
+    cout << endl << endl;
+    cout << "\nafter deleting last item \n";
+    dynamicArray.DeleteLastItem();
     dynamicArray.Print();
     cout << "\n the size is " << dynamicArray.Size();
     
