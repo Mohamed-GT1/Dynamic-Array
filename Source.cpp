@@ -19,8 +19,26 @@ int main() {
 
   
     cout << endl;
-    cout << "\nafter inserting item 400 at index 2 \n";
-    dynamicArray.InsertAt(2, 400);
+    cout << "\nafter inserting item 400 at beginning \n";
+    dynamicArray.InsertAtBeginning(400);
+    dynamicArray.Print();
+    cout << "\n the size is " << dynamicArray.Size();
+
+    cout << endl;
+    cout << "\nafter inserting item 800 at end \n";
+    dynamicArray.InsertAtEnd(800);
+    dynamicArray.Print();
+    cout << "\n the size is " << dynamicArray.Size();
+
+    cout << endl;
+    cout << "\nafter inserting item 77 after index 2 \n";
+    dynamicArray.InsertAfter(2,77);
+    dynamicArray.Print();
+    cout << "\n the size is " << dynamicArray.Size();
+
+    cout << endl;
+    cout << "\nafter inserting item 22 before index 5 \n";
+    dynamicArray.InsertBefore(5,22);
     dynamicArray.Print();
     cout << "\n the size is " << dynamicArray.Size();
     

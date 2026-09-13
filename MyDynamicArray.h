@@ -138,7 +138,7 @@ public:
 	}
 
 	void InsertAt(int index, t value) {
-		if (index < 0 || index > size - 1)
+		if (index < 0 || index > size )
 			return;
 
 		temp = dynArray;
@@ -160,6 +160,19 @@ public:
 
 	}
 
+	void InsertAtBeginning(t value) {
+		InsertAt(0,value);
+	}
+	void InsertAtEnd(t value) {
+		InsertAt(size,value);
+	}
+	void InsertAfter(int index,t value) {
+		InsertAt(index+1,value);
+	}
+	void InsertBefore(int index,t value) {
+		InsertAt(index,value);
+	}
+	
 	~MyDynamicArray() {
 		delete[]dynArray;
 	}
